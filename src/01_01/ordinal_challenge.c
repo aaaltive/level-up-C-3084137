@@ -2,10 +2,20 @@
 
 char *ordinal(int v)
 {
-	/*
-	   - create this function
-	   - this code won't run with out it!
-	 */
+	if (v == 11 || v == 12 || v == 13){
+		return "th";
+	}
+	int a = v % 10;
+	if (a == 1){
+		return "st";
+	}
+	if (a == 2){
+		return "nd";
+	}
+	if (a == 3){
+		return "rd";
+	}
+	return "th";
 }
 
 int main()
